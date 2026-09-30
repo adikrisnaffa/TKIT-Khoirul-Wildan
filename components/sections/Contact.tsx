@@ -18,7 +18,7 @@ export default function Contact() {
         <div>
           <ul className="space-y-3">
             {rows.map(({ Icon, label, value }) => (
-              <li key={label} className="flex items-start gap-4 rounded-3xl bg-white p-4 shadow-soft">
+              <li key={label} className="flex items-start gap-4 rounded-3xl bg-surface p-4 shadow-soft">
                 <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-sky-100 text-sky-600"><Icon className="h-5 w-5" aria-hidden /></span>
                 <div><p className="text-sm font-semibold text-ink/60">{label}</p><p className="break-words font-bold">{value}</p></div>
               </li>

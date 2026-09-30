@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Menu, X, GraduationCap } from "lucide-react";
 import { navigation, schoolInfo, waLink } from "@/lib/data";
 import Button from "@/components/ui/Button";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -19,10 +20,13 @@ export default function Navbar() {
           ))}
         </ul>
         <div className="hidden lg:block"><Button href={waLink()} external className="!min-h-10 !px-5 !py-2 text-sm">Daftar Sekarang</Button></div>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
         <button type="button" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="mobile-menu"
           aria-label={open ? "Tutup menu" : "Buka menu"} className="grid h-11 w-11 place-items-center rounded-full bg-sky-100 text-sky-700 lg:hidden">
           {open ? <X aria-hidden /> : <Menu aria-hidden />}
         </button>
+        </div>
       </nav>
       {open && (
         <div id="mobile-menu" className="border-t border-sky-100 bg-cream px-5 pb-5 lg:hidden">

@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 const variants = {
   primary: "bg-coral-500 text-white shadow-soft hover:bg-coral-600",
-  secondary: "bg-white text-sky-700 ring-2 ring-sky-200 hover:bg-sky-50",
-  light: "bg-white text-sky-700 hover:bg-sun-100",
+  secondary: "bg-surface text-sky-700 ring-2 ring-sky-200 hover:bg-sky-50",
+  light: "bg-surface text-sky-700 hover:bg-sun-100",
   outline: "bg-transparent text-white ring-2 ring-white/70 hover:bg-white/15",
 };
 export default function Button({ href, children, variant = "primary", external, className = "" }:

@@ -22,7 +22,7 @@ export default function Gallery({ items: gallery }: { items: Img[] }) {
             <button type="button" onClick={() => setActive(i)} aria-label={`Lihat ${g.title}`}
               className="group relative h-full w-full overflow-hidden rounded-3xl shadow-soft">
               <PlaceholderImage src={g.src} alt={g.alt} label={g.title} className="transition duration-500 group-hover:scale-110" />
-              <span className="absolute inset-0 flex items-end justify-between bg-gradient-to-t from-ink/70 to-transparent p-4 text-left font-bold text-white opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100">
+              <span className="absolute inset-0 flex items-end justify-between bg-gradient-to-t from-black/70 to-transparent p-4 text-left font-bold text-white opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100">
                 {g.title}<ZoomIn className="h-5 w-5" aria-hidden />
               </span>
             </button>
@@ -31,11 +31,11 @@ export default function Gallery({ items: gallery }: { items: Img[] }) {
       </ul>
       {active !== null && (
         <div role="dialog" aria-modal="true" aria-label={gallery[active].title} onClick={() => setActive(null)}
-          className="fixed inset-0 z-[60] grid place-items-center bg-ink/80 p-5">
-          <div onClick={(e) => e.stopPropagation()} className="relative aspect-[4/3] w-full max-w-3xl overflow-hidden rounded-3xl bg-white">
+          className="fixed inset-0 z-[60] grid place-items-center bg-black/80 p-5">
+          <div onClick={(e) => e.stopPropagation()} className="relative aspect-[4/3] w-full max-w-3xl overflow-hidden rounded-3xl bg-surface">
             <PlaceholderImage src={gallery[active].src} alt={gallery[active].alt} label={gallery[active].title} />
             <button type="button" autoFocus onClick={() => setActive(null)} aria-label="Tutup"
-              className="absolute right-3 top-3 grid h-11 w-11 place-items-center rounded-full bg-white shadow-card"><X aria-hidden /></button>
+              className="absolute right-3 top-3 grid h-11 w-11 place-items-center rounded-full bg-surface shadow-card"><X aria-hidden /></button>
           </div>
         </div>
       )}

@@ -28,7 +28,7 @@ function ImageCard({ item, onChange, onDelete }: { item: Img; onChange: (i: Img)
     setBusy(false); e.target.value = "";
   }
   return (
-    <div className="rounded-2xl bg-white p-3 shadow-soft">
+    <div className="rounded-2xl bg-surface p-3 shadow-soft">
       <div className="aspect-[4/3] overflow-hidden rounded-xl bg-sky-100">
         {item.src ? <img src={item.src} alt={item.alt} className="h-full w-full object-cover" /> : <p className="grid h-full place-items-center text-sm text-ink/50">Belum ada foto</p>}
       </div>
@@ -67,7 +67,7 @@ export default function Editor({ initial }: { initial: Content }) {
     <main className="mx-auto max-w-5xl p-5 pb-32">
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-extrabold">Admin Website</h1>
-        <button type="button" onClick={logout} className="rounded-full bg-white px-4 py-2 font-bold shadow-soft">Keluar</button>
+        <button type="button" onClick={logout} className="rounded-full bg-surface px-4 py-2 font-bold shadow-soft">Keluar</button>
       </div>
 
       <h2 className={h2}>Kegiatan Kami (Galeri)</h2>
@@ -87,7 +87,7 @@ export default function Editor({ initial }: { initial: Content }) {
       <h2 className={h2}>Cerita dari Orang Tua</h2>
       <div className="grid gap-4 md:grid-cols-2">
         {c.testimonials.map((t, i) => (
-          <div key={i} className="rounded-2xl bg-white p-3 shadow-soft">
+          <div key={i} className="rounded-2xl bg-surface p-3 shadow-soft">
             <textarea value={t.quote} rows={4} aria-label="Isi testimoni" onChange={(e) => setT(i, { quote: e.target.value })} className="w-full rounded-lg border-2 border-sky-100 p-3" />
             <input value={t.name} aria-label="Nama" onChange={(e) => setT(i, { name: e.target.value })} className="mt-2 w-full rounded-lg border-2 border-sky-100 px-3 py-2" />
             <button type="button" onClick={() => confirm("Hapus testimoni ini?") && setC({ ...c, testimonials: c.testimonials.filter((_, j) => j !== i) })}
@@ -98,7 +98,7 @@ export default function Editor({ initial }: { initial: Content }) {
       <button type="button" onClick={() => setC({ ...c, testimonials: [...c.testimonials, { quote: "", name: "Orang Tua Siswa" }] })}
         className="mt-4 rounded-full bg-leaf-400 px-5 py-3 font-bold text-white">+ Tambah testimoni</button>
 
-      <div className="fixed inset-x-0 bottom-0 flex items-center justify-between gap-3 border-t border-sky-100 bg-white/95 p-4 backdrop-blur">
+      <div className="fixed inset-x-0 bottom-0 flex items-center justify-between gap-3 border-t border-sky-100 bg-surface/95 p-4 backdrop-blur">
         <p role="status" className="text-sm font-semibold text-leaf-600">{msg}</p>
         <button type="button" onClick={save} disabled={saving} className="min-h-12 rounded-full bg-coral-500 px-8 font-bold text-white disabled:opacity-60">{saving ? "Menyimpan…" : "Simpan perubahan"}</button>
       </div>

@@ -10,7 +10,7 @@ export default function Activities({ items: activities }: { items: Img[] }) {
         {activities.map((a, i) => (
           <li key={a.title} className="list-none">
             <Reveal delay={i * 0.04}>
-              <div className="overflow-hidden rounded-3xl bg-white shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+              <div className="overflow-hidden rounded-3xl bg-surface shadow-soft transition hover:-translate-y-1 hover:shadow-card">
                 <div className="aspect-square"><PlaceholderImage src={a.src} alt={a.alt} /></div>
                 <p className="p-3 text-center font-display font-bold">{a.title}</p>
               </div>

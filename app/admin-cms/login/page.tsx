@@ -14,7 +14,7 @@ export default function Login() {
   }
   return (
     <main className="grid min-h-screen place-items-center p-5">
-      <form onSubmit={submit} className="w-full max-w-sm rounded-3xl bg-white p-6 shadow-card">
+      <form onSubmit={submit} className="w-full max-w-sm rounded-3xl bg-surface p-6 shadow-card">
         <h1 className="text-2xl font-extrabold text-sky-700">Admin TK Khoirul Wildan</h1>
         <label htmlFor="pw" className="mt-5 block font-semibold">Password</label>
         <input id="pw" type="password" value={pw} onChange={(e) => setPw(e.target.value)} autoComplete="current-password" required

@@ -12,7 +12,7 @@ export default function Hero() {
       <FloatingStar className="bottom-16 left-1/2 h-7 w-7" />
       <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
         <Reveal>
-          <span className="inline-block rounded-full bg-white px-4 py-1.5 text-sm font-bold text-sky-700 shadow-soft">{schoolInfo.name}</span>
+          <span className="inline-block rounded-full bg-surface px-4 py-1.5 text-sm font-bold text-sky-700 shadow-soft">{schoolInfo.name}</span>
           <h1 className="mt-5 text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
             Tempat <span className="text-sky-500">Tumbuh</span>, <span className="text-coral-500">Bermain</span>, dan <span className="text-leaf-600">Belajar</span> dengan Bahagia
           </h1>
@@ -23,11 +23,11 @@ export default function Hero() {
           </div>
         </Reveal>
         <Reveal delay={0.15} className="relative">
-          <div className="aspect-[4/3] overflow-hidden rounded-[3rem] rounded-tr-[7rem] bg-white shadow-card ring-8 ring-white">
+          <div className="aspect-[4/3] overflow-hidden rounded-[3rem] rounded-tr-[7rem] bg-surface shadow-card ring-8 ring-surface">
             {/* TODO: Replace with actual school photo, e.g. src="/images/hero.jpg" */}
             <PlaceholderImage alt="Anak-anak TK Khoirul Wildan belajar dan bermain bersama" label="Foto anak belajar & bermain" />
           </div>
-          <div className="absolute -bottom-5 -left-3 rounded-2xl bg-sun-300 px-4 py-2 font-display font-bold shadow-card sm:-left-6">🌈 Belajar itu seru!</div>
+          <div className="absolute -bottom-5 -left-3 rounded-2xl bg-sun-300 text-slate-900 px-4 py-2 font-display font-bold shadow-card sm:-left-6">🌈 Belajar itu seru!</div>
         </Reveal>
       </div>
     </section>

@@ -11,7 +11,7 @@ export default function Testimonials({ items: testimonials }: { items: Testi[] }
         {testimonials.map((t, i) => (
           <li key={i} className="list-none">
             <Reveal delay={i * 0.08} className="h-full">
-              <figure className="h-full rounded-[2rem] bg-white p-6 shadow-soft">
+              <figure className="h-full rounded-[2rem] bg-surface p-6 shadow-soft">
                 <Quote className="h-8 w-8 text-sun-400" aria-hidden />
                 <blockquote className="mt-3 text-ink/80">{t.quote}</blockquote>
                 <figcaption className="mt-4 font-display font-bold text-sky-700">{t.name}</figcaption>

@@ -22,7 +22,7 @@ export default function About() {
           {/* TODO: Replace with actual school information */}
           <ul className="mt-8 grid grid-cols-2 gap-3">
             {stats.map((s) => (
-              <li key={s.label} className="rounded-3xl bg-white p-4 shadow-soft">
+              <li key={s.label} className="rounded-3xl bg-surface p-4 shadow-soft">
                 <p className="font-display text-3xl font-extrabold text-sky-600">{s.value}</p>
                 <p className="text-sm text-ink/70">{s.label}</p>
               </li>

@@ -1,6 +1,20 @@
 @tailwind base; @tailwind components; @tailwind utilities;
+:root {
+  --surface: 255 255 255; --cream: 255 251 242; --ink: 31 51 71;
+  --sky50: 239 248 255; --sky100: 220 239 253; --sky200: 189 225 250;
+  --sun100: 255 241 191; --coral100: 255 225 209; --leaf100: 217 243 223;
+}
+.dark {
+  --surface: 30 41 59; --cream: 15 23 42; --ink: 226 232 240;
+  --sky50: 17 29 48; --sky100: 30 58 95; --sky200: 42 82 130;
+  --sun100: 74 64 20; --coral100: 84 46 28; --leaf100: 26 62 40;
+}
+/* Warna teks aksen dibuat lebih terang di mode gelap agar tetap terbaca */
+.dark .text-sky-600, .dark .text-sky-700 { color: rgb(125 195 245); }
+.dark .text-coral-600 { color: rgb(255 155 98); }
+.dark .text-leaf-600 { color: rgb(92 201 122); }
 html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
-body { @apply bg-cream font-body text-ink antialiased; }
+body { @apply bg-cream font-body text-ink antialiased transition-colors duration-300; }
 h1,h2,h3 { @apply font-display; }
 :focus-visible { @apply outline-none ring-4 ring-sky-400/60 rounded-lg; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
