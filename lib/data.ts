@@ -12,7 +12,7 @@ export const schoolInfo = {
   instagram: "https://www.instagram.com/tkit_khoirulwildan", // TODO: Replace with actual school information
   facebook: "https://www.facebook.com/share/18GqbmLcqY/",
   mapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.8306854638686!2d106.58885057586934!3d-6.285974493702974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fde578fb0c09%3A0x9a176384c3b5b1bc!2sTKIT%20KHOIRUL%20WILDAN!5e0!3m2!1sid!2sid!4v1790741950981!5m2!1sid!2sid",
-  siteUrl:"https://tk-khoirul-wildan.vercel.app",// TODO: paste Google Maps embed URL (src of the iframe)
+  siteUrl:"https://tkit-khoirul-wildan.vercel.app",// TODO: paste Google Maps embed URL (src of the iframe)
 };
 
 
