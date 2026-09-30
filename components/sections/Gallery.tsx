@@ -1,13 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
 import { X, ZoomIn } from "lucide-react";
-import { gallery } from "@/lib/data";
+import type { Img } from "@/lib/content";
 import Section from "@/components/ui/Section";
 import PlaceholderImage from "@/components/ui/PlaceholderImage";
 
 const spans = ["sm:col-span-2 sm:row-span-2", "", "", "", "sm:col-span-2", ""];
 
-export default function Gallery() {
+export default function Gallery({ items: gallery }: { items: Img[] }) {
   const [active, setActive] = useState<number | null>(null);
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setActive(null);

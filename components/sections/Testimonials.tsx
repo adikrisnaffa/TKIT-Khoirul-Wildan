@@ -1,9 +1,9 @@
 import { Quote } from "lucide-react";
-import { testimonials } from "@/lib/data";
+import type { Testi } from "@/lib/content";
 import Section from "@/components/ui/Section";
 import Reveal from "@/components/ui/Reveal";
 
-export default function Testimonials() {
+export default function Testimonials({ items: testimonials }: { items: Testi[] }) {
   // TODO: Replace with real parent testimonials
   return (
     <Section id="informasi" eyebrow="Testimoni" title="Cerita dari Orang Tua" className="bg-sky-50">

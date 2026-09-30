@@ -10,6 +10,9 @@ import Testimonials from "@/components/sections/Testimonials";
 import CTA from "@/components/sections/CTA";
 import Contact from "@/components/sections/Contact";
 import { schoolInfo } from "@/lib/data";
+import { getContent } from "@/lib/content";
+
+export const revalidate = 60;
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -25,7 +28,8 @@ const jsonLd = {
   },
 };
 
-export default function Home() {
+export default async function Home() {
+  const content = await getContent();
   return (
     <>
       <script
@@ -38,9 +42,9 @@ export default function Home() {
         <About />
         <WhyChooseUs />
         <Programs />
-        <Activities />
-        <Gallery />
-        <Testimonials />
+        <Activities items={content.activities} />
+        <Gallery items={content.gallery} />
+        <Testimonials items={content.testimonials} />
         <CTA />
         <Contact />
       </main>

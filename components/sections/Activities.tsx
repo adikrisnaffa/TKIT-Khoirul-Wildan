@@ -1,9 +1,9 @@
-import { activities } from "@/lib/data";
+import type { Img } from "@/lib/content";
 import Section from "@/components/ui/Section";
 import Reveal from "@/components/ui/Reveal";
 import PlaceholderImage from "@/components/ui/PlaceholderImage";
 
-export default function Activities() {
+export default function Activities({ items: activities }: { items: Img[] }) {
   return (
     <Section eyebrow="Aktivitas" title="Belajar Sambil Bermain" intro="Setiap hari penuh kegiatan seru yang menumbuhkan rasa ingin tahu." className="bg-sun-100/40">
       <ul className="grid grid-cols-2 gap-4 md:grid-cols-4">
