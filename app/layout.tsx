@@ -17,9 +17,16 @@ export const metadata: Metadata = {
   openGraph: { title, description, type: "website", locale: "id_ID", siteName: "TK Khoirul Wildan" },
 };
 
+// Menentukan tema sebelum halaman tampil, supaya tidak berkedip.
+// Gelap: 18.00 - 05.59. Terang: 06.00 - 17.59. Pilihan manual tetap diutamakan.
+const themeScript = `(function(){try{var t=localStorage.getItem('theme'),h=new Date().getHours();var d=t==='dark'||(t!=='light'&&(h>=18||h<6));document.documentElement.classList.toggle('dark',d)}catch(e){}})()`;
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="id" className={`${display.variable} ${body.variable}`}>
+    <html lang="id" suppressHydrationWarning className={`${display.variable} ${body.variable}`}>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body>{children}</body>
     </html>
   );
